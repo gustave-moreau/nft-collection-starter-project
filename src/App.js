@@ -11,6 +11,8 @@ const TWITTER_HANDLE = 'moreau_shop';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
+//コントラクトアドレスを変数に格納
+const CONTRACT_ADDRESS = "0xF221EE41004B9403554CD6816C05491fc5D5B158";
 
 const App = () => {
   // ユーザーのウォレットアドレスを格納する状態変数
@@ -106,7 +108,6 @@ const App = () => {
 
   // コントラクトとWebサイトを連携
   const askContractToMintNft  = async () => {
-    const CONTRACT_ADDRESS = "0xF221EE41004B9403554CD6816C05491fc5D5B158"
     try {
       const {ethereum } = window;
       if(ethereum) {
